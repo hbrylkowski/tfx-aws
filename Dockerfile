@@ -1,6 +1,6 @@
 FROM tensorflow/tfx:0.22.0
 
-RUN python3.6 -m pip install "apache-beam[aws]"
+RUN python3.6 -m pip install "apache-beam[aws]" tensorflowjs
 
 ENV CUDA_VERSION 10.1.243
 ENV CUDA_PKG_VERSION 10-1=$CUDA_VERSION-1
