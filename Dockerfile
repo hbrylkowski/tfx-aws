@@ -31,8 +31,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
     apt-get update && apt-get install -y --no-install-recommends libcudnn7=$CUDNN_VERSION-1+cuda10.1 && \
     apt-mark hold libcudnn7 && \
     rm -rf /var/lib/apt/lists/* && \
-    pip uninstall -y tensorflow && \
-    pip install -y tensorflow-gpu==2.2.0
+    pip uninstall tensorflow && \
+    pip install tensorflow-gpu==2.2.0
 
 ENTRYPOINT ["python3.6", "/tfx-src/tfx/scripts/run_executor.py"]
 
