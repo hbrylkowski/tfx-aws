@@ -1,7 +1,7 @@
 FROM tensorflow/tfx:0.22.0
 
 RUN python3.6 -m pip install "apache-beam[aws]"
-RUN python3.6 -m pip install tensorflowjs tensorflow-hub --no-deps
+RUN python3.6 -m pip install tensorflowjs tensorflow-hub tensorflow==2.1.1 tensorflow-data-validation==0.22.0 --no-deps
 
 ENV CUDA_VERSION 10.1.243
 ENV CUDA_PKG_VERSION 10-1=$CUDA_VERSION-1
